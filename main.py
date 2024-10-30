@@ -29,7 +29,7 @@ logger.addHandler(logger_file_handler)
 
 # Set up Chrome options
 options = webdriver.ChromeOptions()
-options.headless = False  # Change to True to run in headless mode
+options.headless = True  # Change to True to run in headless mode
 
 # Initialize the Chrome driver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
