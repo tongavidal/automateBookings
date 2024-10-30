@@ -6,11 +6,26 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
+import logging
+import logging.handlers
 import time
 import os
 
 email = os.environ["USERNAME"]
 pwd = os.environ["PASSWORD"]
+
+# Set up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger_file_handler = logging.handlers.RotatingFileHandler(
+    "status.log",
+    maxBytes=1024 * 1024,
+    backupCount=1,
+    encoding="utf8",
+)
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logger_file_handler.setFormatter(formatter)
+logger.addHandler(logger_file_handler)
 
 # Set up Chrome options
 options = webdriver.ChromeOptions()
@@ -52,6 +67,8 @@ try:
 
     password_field.send_keys(Keys.RETURN)
 
+    logger.info('Logging success for user: ' + email)
+
     time.sleep(5)
 
     driver.find_element(By.CSS_SELECTOR, "#menuSwiperCon > div.swiper-wrapper > div > a.ahMenuOp.ahPicReservations").click()
@@ -76,7 +93,7 @@ try:
     )
     reservar_link.click()
 
-    print(classToBook + ' was booked succesfully!')
+    logger.info(classToBook + ' was booked succesfully!')
 
     time.sleep(5)
 
