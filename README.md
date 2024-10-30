@@ -1,4 +1,4 @@
-# Automate Aimharder bookings
+# Automate Aimharder bookings using selenium
 
 **Customize bookings:**
  - Adapt the cron job in the actions.yml
@@ -7,7 +7,7 @@
 
    
 
-**Reference tutorial:**
+**Reference tutorial for github actions:**
 
 [![Alt text](https://img.youtube.com/vi/PaGp7Vi5gfM/hqdefault.jpg)](https://youtu.be/PaGp7Vi5gfM)
 
