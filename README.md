@@ -1,6 +1,10 @@
-# Schedule a Python script with GitHub Actions
+# Automate Aimharder bookings
 
-**Watch the video tutorial:**
+**Customize bookings:**
+ - Adapt the cron job in the actions.yml
+ - Set your actions secrets USERNAME and PASSWORD
+
+**Reference tutorial:**
 
 [![Alt text](https://img.youtube.com/vi/PaGp7Vi5gfM/hqdefault.jpg)](https://youtu.be/PaGp7Vi5gfM)
 
