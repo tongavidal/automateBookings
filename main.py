@@ -29,10 +29,17 @@ logger.addHandler(logger_file_handler)
 
 # Set up Chrome options
 options = webdriver.ChromeOptions()
-options.headless = True  # Change to True to run in headless mode
+options.add_argument("start-maximized")
+options.add_argument("enable-automation")
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-browser-side-navigation")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1920,1080")
 
 # Initialize the Chrome driver
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver = webdriver.Chrome(options)
 
 daysRange = 4 # Days reservation restriction
 
