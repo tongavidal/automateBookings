@@ -23,12 +23,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: install selenium packages
-        run: |
-          pip install selenium
+        run: pip install selenium
 
       - name: install webdriver manager packages
-        run: |
-          pip install webdriver_manager
+        run: pip install webdriver_manager
           
       - name: execute py script # run main.py
         env:
