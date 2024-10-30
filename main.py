@@ -93,8 +93,6 @@ try:
     input_field.send_keys(classToBook)
     input_field.send_keys(Keys.ENTER)
 
-    # TODO improve the book button picker
-    # driver.find_element(By.CSS_SELECTOR, "#bloqueClass472329 > div.controlesClase > a:nth-child(2)").click()
     reservar_link = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, "Reservar"))
     )
