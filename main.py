@@ -60,7 +60,6 @@ day_action = {
 
 classToBook = day_action.get(current_day, "WOD")
 
-
 try:
     driver.get("https://aimharder.com/login")
 
