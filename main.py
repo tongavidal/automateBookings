@@ -75,7 +75,7 @@ try:
 
     logger.info('Logging success for user: ' + email)
 
-    time.sleep(5)
+    time.sleep(7)
 
     driver.find_element(By.CSS_SELECTOR, "#menuSwiperCon > div.swiper-wrapper > div > a.ahMenuOp.ahPicReservations").click()
     button = driver.find_element(By.ID, "nextDay")
