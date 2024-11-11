@@ -37,12 +37,6 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         run: python main.py
 
-      - name: execute py script # run main.py for second account
-        env:
-          USERNAME: ${{ secrets.SECOND_USERNAME }}
-          PASSWORD: ${{ secrets.SECOND_PASSWORD }}
-        run: python main.py
-
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
