@@ -50,11 +50,11 @@ current_day = datetime.now().strftime('%A')
 
 day_action = {
     'Monday': 'WOD', # friday class
-    'Tuesday': 'SUPERWOD', # saturday class
+    'Tuesday': 'Community day', # saturday class
     'Wednesday': 'WOD SUNDAY', # sunday class
     'Thursday': 'WOD', # monday class
     'Friday': 'WEIGHTLIFTING', # tuesday class
-    'Saturday': 'ENDURANCE', # wednesday class
+    'Saturday': 'HYBRID TRAINING', # wednesday class
     'Sunday': 'WOD' # thursday class
 }
 
