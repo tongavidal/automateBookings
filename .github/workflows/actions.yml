@@ -3,9 +3,9 @@ name: run main.py
 on:
   schedule:
     # Runs every day at 7 a.m. except Tuesday and Wednesday
-    - cron: '0 6 * * 0,1,3-6'  # Sunday, Monday, Thursday, Friday, Saturday
+    - cron: '0 7 * * 0,1,3-6'  # Sunday, Monday, Thursday, Friday, Saturday
     # Runs on Tuesday and Wednesday at 11 a.m.
-    - cron: '0 10 * * 2,3'      # Tuesday and Wednesday
+    - cron: '0 11 * * 2,3'      # Tuesday and Wednesday
 
 jobs:
   build:
