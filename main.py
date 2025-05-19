@@ -41,7 +41,7 @@ options.add_argument("--window-size=1920,1080")
 # Initialize the Chrome driver
 driver = webdriver.Chrome(options)
 
-daysRange = 4 # Days reservation restriction
+daysRange = 2 # Days reservation restriction
 
 def denyCookies(driver):
     driver.find_element(By.CSS_SELECTOR, "#eucookielaw > div.conCookie > a:nth-child(1)").click()
@@ -49,13 +49,13 @@ def denyCookies(driver):
 current_day = datetime.now().strftime('%A')
 
 day_action = {
-    'Monday': 'WOD', # friday class
-    'Tuesday': 'Community day', # saturday class
-    'Wednesday': 'WOD SUNDAY', # sunday class
+    'Monday': 'Engine', # friday class
+    'Tuesday': 'WOD', # saturday class
+    'Wednesday': 'WOD', # sunday class
     'Thursday': 'WOD', # monday class
     'Friday': 'WEIGHTLIFTING', # tuesday class
-    'Saturday': 'HYBRID TRAINING', # wednesday class
-    'Sunday': 'WOD' # thursday class
+    'Saturday': 'WOD', # wednesday class
+    'Sunday': 'GYMNASTICS' # thursday class
 }
 
 classToBook = day_action.get(current_day, "WOD")
