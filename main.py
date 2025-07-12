@@ -49,13 +49,13 @@ def denyCookies(driver):
 current_day = datetime.now().strftime('%A')
 
 day_action = {
-    'Monday': 'Engine', # friday class
-    'Tuesday': 'WOD', # saturday class
-    'Wednesday': 'WOD', # sunday class
-    'Thursday': 'WOD', # monday class
-    'Friday': 'WEIGHTLIFTING', # tuesday class
-    'Saturday': 'WOD', # wednesday class
-    'Sunday': 'GYMNASTICS' # thursday class
+    'Monday': 'Engine', # Wednesday class
+    'Tuesday': 'WOD', # Thursday class
+    'Wednesday': 'WOD', # Friday class
+    'Thursday': 'WOD', # Saturday class
+    'Friday': 'WEIGHTLIFTING', # Sunday class
+    'Saturday': 'WOD', # Monday class
+    'Sunday': 'GYMNASTICS' # Tuesday class
 }
 
 classToBook = day_action.get(current_day, "WOD")
